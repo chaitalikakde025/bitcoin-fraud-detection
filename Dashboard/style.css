@@ -1,0 +1,1590 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 250px;
+    background: #ffffff;
+    border-right: 1px solid #e6eaf0;
+    padding: 28px 18px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 45px;
+    padding-left: 8px;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    background: #eef4ff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.logo h2 {
+    font-size: 19px;
+}
+
+.logo span {
+    font-size: 11px;
+    color: #8a94a6;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-item {
+    padding: 13px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #687386;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.nav-item span {
+    font-size: 18px;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background: #edf4ff;
+    color: #2864dc;
+    font-weight: 600;
+}
+
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.system-status {
+    border: 1px solid #e7ebf1;
+    padding: 13px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    background: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #dcfce7;
+}
+
+.system-status strong {
+    display: block;
+    font-size: 12px;
+}
+
+.system-status small {
+    color: #8a94a6;
+    font-size: 10px;
+}
+
+.version {
+    text-align: center;
+    color: #a0a8b5;
+    font-size: 10px;
+    margin-top: 20px;
+}
+
+
+/* MAIN */
+
+.main {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding: 30px 38px;
+}
+
+
+/* TOPBAR */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.topbar h1 {
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+
+.topbar p {
+    color: #8993a5;
+    font-size: 13px;
+}
+
+.top-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.live {
+    border: 1px solid #dce2ea;
+    padding: 9px 13px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #596477;
+}
+
+.live span {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: #22c55e;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+.profile {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #edf2f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* STATS */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid #e8ecf2;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 3px 12px rgba(20, 40, 80, 0.03);
+}
+
+.stat-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #7a8495;
+    font-size: 12px;
+}
+
+.stat-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.blue {
+    background: #eaf2ff;
+    color: #3974dc;
+}
+
+.red {
+    background: #fff0f0;
+    color: #e34d59;
+}
+
+.orange {
+    background: #fff5e8;
+    color: #ef9b28;
+}
+
+.green {
+    background: #eafaf0;
+    color: #28a45a;
+}
+
+.stat-card h2 {
+    font-size: 29px;
+    margin: 17px 0 8px;
+}
+
+.stat-change {
+    font-size: 11px;
+    color: #2cab61;
+}
+
+.stat-change small {
+    color: #9aa3b1;
+    margin-left: 5px;
+}
+
+.red-text {
+    color: #e4515a;
+}
+
+.orange-text {
+    color: #ed9a25;
+}
+
+.green-text {
+    color: #2cab61;
+}
+
+
+/* PANELS */
+
+.panel {
+    background: #ffffff;
+    border: 1px solid #e7ebf1;
+    border-radius: 15px;
+    padding: 22px;
+    box-shadow: 0 3px 12px rgba(20, 40, 80, 0.03);
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.panel-header h3 {
+    font-size: 15px;
+}
+
+.panel-header p {
+    color: #969eac;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.panel-header button {
+    border: 1px solid #e2e6ec;
+    background: white;
+    padding: 8px 11px;
+    border-radius: 7px;
+    color: #697386;
+    font-size: 11px;
+}
+
+
+/* CHARTS */
+
+.charts {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.risk-chart {
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.activity-chart {
+    height: 260px;
+    padding-top: 15px;
+}
+
+
+/* LOWER */
+
+.lower-grid {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    font-size: 10px;
+    color: #9aa2af;
+    font-weight: 600;
+    padding: 12px 8px;
+    border-bottom: 1px solid #edf0f4;
+}
+
+td {
+    padding: 14px 8px;
+    border-bottom: 1px solid #f0f2f5;
+    font-size: 11px;
+    color: #566174;
+}
+
+td strong {
+    color: #263146;
+}
+
+.risk-number {
+    font-weight: bold;
+    color: #e04c57;
+}
+
+.risk-badge {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 6px;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.high {
+    background: #fff0f1;
+    color: #d94751;
+}
+
+.tag {
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 9px;
+}
+
+.danger-tag {
+    background: #fff0f1;
+    color: #d94751;
+}
+
+.anomaly-tag {
+    background: #f1edff;
+    color: #7658d6;
+}
+
+.velocity-tag {
+    background: #fff5e6;
+    color: #dc911f;
+}
+
+.view-btn {
+    color: #2864dc !important;
+    border: none !important;
+    background: none !important;
+}
+
+
+/* DETECTION */
+
+.signal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 23px;
+    font-size: 12px;
+}
+
+.signal-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.signal-icon {
+    width: 31px;
+    height: 31px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.signal-info strong {
+    display: block;
+    font-size: 11px;
+}
+
+.signal-info small {
+    display: block;
+    color: #9aa2af;
+    margin-top: 3px;
+    font-size: 9px;
+}
+
+.purple {
+    background: #f1edff;
+    color: #7759d7;
+}
+
+.progress {
+    height: 5px;
+    background: #f0f2f5;
+    border-radius: 10px;
+    margin-top: 9px;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.purple-bar {
+    width: 68%;
+    background: #7759d7;
+}
+
+.orange-bar {
+    width: 42%;
+    background: #ed9b28;
+}
+
+.blue-bar {
+    width: 31%;
+    background: #3974dc;
+}
+
+
+/* INVESTIGATION */
+
+.investigation {
+    margin-bottom: 25px;
+}
+
+.investigation-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-label {
+    font-size: 9px;
+    color: #3974dc;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.investigation-title h2 {
+    font-size: 18px;
+    margin-top: 6px;
+}
+
+.large {
+    padding: 8px 13px;
+}
+
+.investigation-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.investigation-card {
+    background: #f8f9fb;
+    border: 1px solid #edf0f4;
+    border-radius: 11px;
+    padding: 16px;
+}
+
+.investigation-card span {
+    display: block;
+    color: #8993a3;
+    font-size: 10px;
+}
+
+.investigation-card strong {
+    display: block;
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.investigation-card small {
+    display: block;
+    color: #9aa3af;
+    margin-top: 5px;
+    font-size: 9px;
+}
+
+.big-score {
+    color: #d94751;
+}
+
+.big-score span {
+    display: inline;
+    font-size: 11px;
+    color: #9aa3af;
+}
+
+.score-line {
+    height: 5px;
+    background: #eceff3;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.score-line div {
+    width: 85%;
+    height: 100%;
+    background: #e04c57;
+    border-radius: 10px;
+}
+
+.detected {
+    color: #d94751;
+    font-size: 15px !important;
+}
+
+
+/* EVIDENCE */
+
+.evidence {
+    margin-top: 20px;
+    border-top: 1px solid #edf0f4;
+    padding-top: 18px;
+}
+
+.evidence h3 {
+    font-size: 13px;
+    margin-bottom: 13px;
+}
+
+.evidence-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.evidence-list div {
+    background: #f8f9fb;
+    border: 1px solid #edf0f4;
+    padding: 11px;
+    border-radius: 8px;
+    font-size: 10px;
+    color: #596476;
+}
+
+.evidence-list span {
+    color: #22a65a;
+    font-weight: bold;
+    margin-right: 6px;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    color: #a1a8b4;
+    font-size: 10px;
+    padding: 5px 0 20px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .charts,
+    .lower-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .investigation-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .investigation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .evidence-list {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==========================================
+   HIGH RISK TRANSACTIONS TABLE
+========================================== */
+
+.transactions-section {
+
+    margin-top: 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5eaf2;
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+    box-shadow: 0 4px 16px rgba(30, 50, 80, 0.04);
+
+}
+
+
+.section-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+.section-header h2 {
+
+    margin: 0;
+
+    font-size: 18px;
+
+    color: #1d2942;
+
+}
+
+
+.section-header p {
+
+    margin: 6px 0 0;
+
+    font-size: 12px;
+
+    color: #8792a8;
+
+}
+
+
+.risk-badge {
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background: #fff0f1;
+
+    color: #e4515a;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+.table-container {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+}
+
+
+#transactionTable {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 12px;
+
+}
+
+
+#transactionTable th {
+
+    text-align: left;
+
+    padding: 13px 12px;
+
+    background: #f8fafd;
+
+    color: #71809a;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    border-bottom: 1px solid #e8edf4;
+
+}
+
+
+#transactionTable td {
+
+    padding: 15px 12px;
+
+    color: #34405a;
+
+    border-bottom: 1px solid #edf1f6;
+
+}
+
+
+#transactionTable tbody tr {
+
+    transition: 0.2s;
+
+}
+
+
+#transactionTable tbody tr:hover {
+
+    background: #f8faff;
+
+    cursor: pointer;
+
+}
+
+
+.high-risk {
+
+    color: #e4515a;
+
+    font-weight: 700;
+
+}
+
+
+.medium-risk {
+
+    color: #f1a33b;
+
+    font-weight: 700;
+
+}
+
+
+.low-risk {
+
+    color: #35b96b;
+
+    font-weight: 700;
+}
+
+/* ==========================================
+   INVESTIGATION TRANSACTION DETAILS
+========================================== */
+
+.investigation-details {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 18px;
+
+}
+
+
+.detail-item {
+
+    background: #ffffff;
+
+    border: 1px solid #e8edf3;
+
+    border-radius: 10px;
+
+    padding: 13px 15px;
+
+    min-height: 65px;
+
+    transition: 0.2s;
+
+}
+
+
+.detail-item:hover {
+
+    border-color: #d7e2f5;
+
+    background: #fbfcff;
+
+}
+
+
+.detail-item span {
+
+    display: block;
+
+    color: #8a94a6;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.detail-item strong {
+
+    display: block;
+
+    color: #263146;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    word-break: break-all;
+
+}
+
+
+/* ==========================================
+   INVESTIGATION SCORE BAR
+========================================== */
+
+#investigationScoreBar {
+
+    height: 100%;
+
+    width: 0%;
+
+    background: #e4515a;
+
+    border-radius: 10px;
+
+    transition: width 0.5s ease;
+
+}
+
+
+/* ==========================================
+   RISK LEVEL COLORS
+========================================== */
+
+.risk-badge.large.high {
+
+    background: #fff0f1;
+
+    color: #e4515a;
+
+}
+
+
+.risk-badge.large.medium {
+
+    background: #fff5e8;
+
+    color: #ef9b28;
+
+}
+
+
+.risk-badge.large.low {
+
+    background: #eafaf0;
+
+    color: #28a45a;
+
+}
+
+
+/* ==========================================
+   INVESTIGATION CARD IMPROVEMENTS
+========================================== */
+
+.investigation-card {
+
+    transition: 0.2s;
+
+}
+
+
+.investigation-card:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 15px rgba(30, 50, 80, 0.05);
+
+}
+
+
+/* ==========================================
+   RESPONSIVE INVESTIGATION DETAILS
+========================================== */
+
+@media (max-width: 900px) {
+
+    .investigation-details {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .investigation-details {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+/* ==========================================
+   RISK MONITORING SECTION
+========================================== */
+
+.risk-monitoring-section {
+
+    margin-top: 24px;
+    margin-bottom: 20px;
+
+}
+
+
+.risk-monitoring-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 18px;
+
+}
+
+
+.risk-monitoring-header h2 {
+
+    font-size: 20px;
+    color: #1d2942;
+
+}
+
+
+.risk-monitoring-header p {
+
+    margin-top: 5px;
+
+    font-size: 11px;
+
+    color: #8792a8;
+
+}
+
+
+.monitoring-badge {
+
+    padding: 8px 13px;
+
+    border-radius: 20px;
+
+    background: #fff0f1;
+
+    color: #e4515a;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+/* ==========================================
+   MONITORING CARDS
+========================================== */
+
+.monitoring-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.monitoring-card {
+
+    background: #ffffff;
+
+    border: 1px solid #e7ebf1;
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+    box-shadow:
+        0 3px 12px rgba(20, 40, 80, 0.03);
+
+    transition: 0.2s ease;
+
+}
+
+
+.monitoring-card:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 18px rgba(20, 40, 80, 0.06);
+
+}
+
+
+.monitoring-card-top {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 14px;
+
+}
+
+
+.monitoring-icon {
+
+    width: 34px;
+
+    height: 34px;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+}
+
+
+.monitoring-icon.red {
+
+    background: #fff0f1;
+
+    color: #e4515a;
+
+}
+
+
+.monitoring-icon.orange {
+
+    background: #fff5e8;
+
+    color: #ef9b28;
+
+}
+
+
+.monitoring-icon.green {
+
+    background: #eafaf0;
+
+    color: #28a45a;
+
+}
+
+
+.monitoring-icon.purple {
+
+    background: #f1edff;
+
+    color: #7759d7;
+
+}
+
+
+.monitoring-card-title {
+
+    font-size: 11px;
+
+    color: #7a8495;
+
+    font-weight: 600;
+
+}
+
+
+.monitoring-card-value {
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    color: #1d2942;
+
+    margin-bottom: 5px;
+
+}
+
+
+.monitoring-card-description {
+
+    font-size: 10px;
+
+    color: #9aa3b1;
+
+}
+
+
+/* ==========================================
+   RISK ALERT SUMMARY
+========================================== */
+
+.risk-alert-summary {
+
+    background: #ffffff;
+
+    border: 1px solid #e7ebf1;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 3px 12px rgba(20, 40, 80, 0.03);
+
+}
+
+
+.risk-alert-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 16px;
+
+}
+
+
+.risk-alert-title h3 {
+
+    font-size: 14px;
+
+    color: #1d2942;
+
+}
+
+
+.risk-alert-title span {
+
+    font-size: 15px;
+
+}
+
+
+.risk-alert-subtitle {
+
+    color: #9aa3b1;
+
+    font-size: 10px;
+
+    margin-top: 3px;
+
+}
+
+
+.risk-alert-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+}
+
+
+.alert-stat {
+
+    background: #f8f9fb;
+
+    border: 1px solid #edf0f4;
+
+    border-radius: 10px;
+
+    padding: 13px;
+
+}
+
+
+.alert-stat span {
+
+    display: block;
+
+    font-size: 9px;
+
+    color: #8a94a6;
+
+    margin-bottom: 7px;
+
+}
+
+
+.alert-stat strong {
+
+    display: block;
+
+    font-size: 17px;
+
+    color: #263146;
+
+}
+
+
+.alert-stat.high strong {
+
+    color: #e4515a;
+
+}
+
+
+.alert-stat.medium strong {
+
+    color: #ef9b28;
+
+}
+
+
+.alert-stat.status strong {
+
+    color: #28a45a;
+
+}
+
+
+/* ==========================================
+   RESPONSIVE RISK MONITORING
+========================================== */
+
+@media (max-width: 1100px) {
+
+    .monitoring-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .monitoring-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .risk-alert-stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .risk-monitoring-header {
+
+        align-items: flex-start;
+
+        gap: 12px;
+
+        flex-direction: column;
+
+    }
+
+}
+/* ==========================================
+   TRANSACTION SEARCH & FILTER
+========================================== */
+
+.transaction-controls {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.search-box {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: 300px;
+
+    height: 38px;
+
+    padding: 0 12px;
+
+    background: #f8fafd;
+
+    border: 1px solid #e2e7ef;
+
+    border-radius: 9px;
+
+    transition: 0.2s ease;
+
+}
+
+
+.search-box:focus-within {
+
+    border-color: #3974dc;
+
+    background: #ffffff;
+
+    box-shadow: 0 0 0 3px rgba(57, 116, 220, 0.08);
+
+}
+
+
+.search-box span {
+
+    font-size: 14px;
+
+}
+
+
+.search-box input {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #263146;
+
+    font-size: 11px;
+
+}
+
+
+.search-box input::placeholder {
+
+    color: #9aa3b1;
+
+}
+
+
+.risk-filter {
+
+    height: 38px;
+
+    padding: 0 12px;
+
+    border: 1px solid #e2e7ef;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #596476;
+
+    font-size: 11px;
+
+    outline: none;
+
+    cursor: pointer;
+
+}
+
+
+.risk-filter:focus {
+
+    border-color: #3974dc;
+
+}
+
+
+.clear-filter {
+
+    height: 38px;
+
+    padding: 0 15px;
+
+    border: 1px solid #e2e7ef;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #697386;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+.clear-filter:hover {
+
+    background: #edf4ff;
+
+    border-color: #cbdaf5;
+
+    color: #2864dc;
+
+}
+
+
+/* FILTER RESULT MESSAGE */
+
+.filter-result {
+
+    margin-left: auto;
+
+    color: #8a94a6;
+
+    font-size: 10px;
+
+}
+
+
+/* EMPTY SEARCH RESULT */
+
+.no-results {
+
+    text-align: center;
+
+    padding: 30px !important;
+
+    color: #8a94a6 !important;
+
+    font-size: 12px !important;
+
+}
+
+
+/* ==========================================
+   RESPONSIVE SEARCH
+========================================== */
+
+@media (max-width: 700px) {
+
+    .search-box {
+
+        width: 100%;
+
+    }
+
+    .risk-filter {
+
+        flex: 1;
+
+    }
+
+    .clear-filter {
+
+        flex: 0 0 auto;
+
+    }
+
+}

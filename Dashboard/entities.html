@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Entity Analysis - FraudGuard</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="dashboard">
+
+
+    <!-- ================================= -->
+    <!-- SIDEBAR -->
+    <!-- ================================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                🛡️
+            </div>
+
+            <div>
+
+                <h2>
+                    FraudGuard
+                </h2>
+
+                <span>
+                    Blockchain Security
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav>
+
+    <a
+        class="nav-item"
+        href="index.html"
+    >
+        <span>▦</span>
+        Dashboard
+    </a>
+
+
+    <a
+        class="nav-item"
+        href="index.html#riskMonitoringSection"
+    >
+        <span>⚠</span>
+        Risk Monitoring
+    </a>
+
+
+    <a
+        class="nav-item"
+        href="index.html#transactionsSection"
+    >
+        <span>⌕</span>
+        Transactions
+    </a>
+
+
+    <a
+        class="nav-item active"
+        href="entities.html"
+    >
+        <span>◎</span>
+        Entity Analysis
+    </a>
+
+
+    <a
+        class="nav-item"
+        href="network.html"
+    >
+        <span>◈</span>
+        Network Activity
+    </a>
+
+</nav>
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <div class="system-status">
+
+                <span class="status-dot"></span>
+
+                <div>
+
+                    <strong>
+                        System Online
+                    </strong>
+
+                    <small>
+                        AI Engine Active
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="version">
+
+                SIH 2026 Prototype
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================================= -->
+    <!-- MAIN CONTENT -->
+    <!-- ================================= -->
+
+    <main class="main">
+
+
+        <!-- ================================= -->
+        <!-- TOP BAR -->
+        <!-- ================================= -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+                    Entity Analysis
+                </h1>
+
+                <p>
+                    AI-powered blockchain entity clustering and risk analysis
+                </p>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <div class="live">
+
+                    <span></span>
+
+                    LIVE MONITORING
+
+                </div>
+
+
+                <div class="profile">
+                    👤
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ================================= -->
+        <!-- ENTITY STAT CARDS -->
+        <!-- ================================= -->
+
+        <section class="stats">
+
+
+            <!-- TOTAL ENTITIES -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        Total Entities
+                    </span>
+
+                    <div class="stat-icon blue">
+                        ◎
+                    </div>
+
+                </div>
+
+
+                <h2 id="totalEntities">
+                    0
+                </h2>
+
+
+                <div class="stat-change">
+
+                    <span>
+                        AI Clustered
+                    </span>
+
+                    <small>
+                        blockchain entities
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- HIGH RISK -->
+
+            <div class="stat-card danger">
+
+                <div class="stat-top">
+
+                    <span>
+                        High Risk Entities
+                    </span>
+
+                    <div class="stat-icon red">
+                        ⚠
+                    </div>
+
+                </div>
+
+
+                <h2 id="highEntities">
+                    0
+                </h2>
+
+
+                <div class="stat-change red-text">
+
+                    <span>
+                        Requires attention
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MEDIUM RISK -->
+
+            <div class="stat-card warning">
+
+                <div class="stat-top">
+
+                    <span>
+                        Medium Risk
+                    </span>
+
+                    <div class="stat-icon orange">
+                        !
+                    </div>
+
+                </div>
+
+
+                <h2 id="mediumEntities">
+                    0
+                </h2>
+
+
+                <div class="stat-change orange-text">
+
+                    <span>
+                        Under monitoring
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LOW RISK -->
+
+            <div class="stat-card success">
+
+                <div class="stat-top">
+
+                    <span>
+                        Low Risk
+                    </span>
+
+                    <div class="stat-icon green">
+                        ✓
+                    </div>
+
+                </div>
+
+
+                <h2 id="lowEntities">
+                    0
+                </h2>
+
+
+                <div class="stat-change green-text">
+
+                    <span>
+                        Normal entities
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================= -->
+        <!-- BLOCKCHAIN ENTITY TABLE -->
+        <!-- ================================= -->
+
+        <section class="transactions-section">
+
+
+            <!-- SECTION HEADER -->
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        Blockchain Entities
+                    </h2>
+
+                    <p>
+                        DBSCAN clustered entities requiring monitoring
+                    </p>
+
+                </div>
+
+
+                <span class="risk-badge">
+                    AI Clustered
+                </span>
+
+            </div>
+
+
+
+            <!-- ================================= -->
+            <!-- SEARCH AND FILTER CONTROLS -->
+            <!-- ================================= -->
+
+            <div class="transaction-controls">
+
+
+                <!-- SEARCH -->
+
+                <div class="search-box">
+
+                    <span>
+                        🔎
+                    </span>
+
+                    <input
+                        type="text"
+                        id="entitySearch"
+                        placeholder="Search Entity ID..."
+                    >
+
+                </div>
+
+
+                <!-- RISK FILTER -->
+
+                <select
+                    id="entityRiskFilter"
+                    class="risk-filter"
+                >
+
+                    <option value="ALL">
+                        All Risk Levels
+                    </option>
+
+                    <option value="HIGH">
+                        High Risk
+                    </option>
+
+                    <option value="MEDIUM">
+                        Medium Risk
+                    </option>
+
+                    <option value="LOW">
+                        Low Risk
+                    </option>
+
+                </select>
+
+
+                <!-- CLEAR -->
+
+                <button
+                    id="clearEntityFilters"
+                    class="clear-filter"
+                    type="button"
+                >
+
+                    Clear
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ================================= -->
+            <!-- ENTITY TABLE -->
+            <!-- ================================= -->
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Entity ID
+                            </th>
+
+                            <th>
+                                Cluster
+                            </th>
+
+                            <th>
+                                Transactions
+                            </th>
+
+                            <th>
+                                Total BTC
+                            </th>
+
+                            <th>
+                                Avg Risk
+                            </th>
+
+                            <th>
+                                Highest Risk
+                            </th>
+
+                            <th>
+                                Risk Level
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="entityTableBody">
+
+                        <tr>
+
+                            <td colspan="7">
+
+                                Loading entities...
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================= -->
+        <!-- ENTITY INVESTIGATION -->
+        <!-- ================================= -->
+
+        <section class="panel investigation">
+
+
+            <!-- INVESTIGATION HEADER -->
+
+            <div class="investigation-title">
+
+                <div>
+
+                    <span class="section-label">
+                        ENTITY INVESTIGATION
+                    </span>
+
+
+                    <h2>
+                        Cluster Risk Analysis
+                    </h2>
+
+                </div>
+
+
+                <span
+                    id="entityInvestigationRisk"
+                    class="risk-badge high large"
+                >
+
+                    SELECT ENTITY
+
+                </span>
+
+            </div>
+
+
+
+            <!-- ================================= -->
+            <!-- INVESTIGATION DETAILS -->
+            <!-- ================================= -->
+
+            <div class="investigation-grid">
+
+
+                <!-- ENTITY ID -->
+
+                <div class="investigation-card">
+
+                    <span>
+                        Entity ID
+                    </span>
+
+                    <strong
+                        id="selectedEntityId"
+                        style="font-size:14px;"
+                    >
+
+                        —
+
+                    </strong>
+
+                </div>
+
+
+
+                <!-- CLUSTER -->
+
+                <div class="investigation-card">
+
+                    <span>
+                        Cluster
+                    </span>
+
+                    <strong id="selectedCluster">
+
+                        —
+
+                    </strong>
+
+                    <small>
+                        DBSCAN cluster
+                    </small>
+
+                </div>
+
+
+
+                <!-- TOTAL BTC -->
+
+                <div class="investigation-card">
+
+                    <span>
+                        Total BTC
+                    </span>
+
+                    <strong id="selectedBTC">
+
+                        —
+
+                    </strong>
+
+                    <small>
+                        Entity transaction volume
+                    </small>
+
+                </div>
+
+
+
+                <!-- HIGHEST RISK -->
+
+                <div class="investigation-card">
+
+                    <span>
+                        Highest Risk
+                    </span>
+
+                    <strong id="selectedRisk">
+
+                        —
+
+                    </strong>
+
+                    <small>
+                        Maximum transaction risk
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================================= -->
+            <!-- RISK BREAKDOWN -->
+            <!-- ================================= -->
+
+            <div class="evidence">
+
+                <h3>
+                    🔎 Entity Risk Breakdown
+                </h3>
+
+
+                <div
+                    class="evidence-list"
+                    id="entityEvidence"
+                >
+
+                    <div>
+
+                        <span>✓</span>
+
+                        Select an entity from the table to investigate
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================= -->
+        <!-- FOOTER -->
+        <!-- ================================= -->
+
+        <footer>
+
+            Blockchain Fraud Detection •
+
+            AI/ML Entity Analysis •
+
+            SIH 2026
+
+        </footer>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- ================================= -->
+<!-- ENTITY JAVASCRIPT -->
+<!-- ================================= -->
+
+<script src="entities.js"></script>
+
+
+</body>
+
+</html>

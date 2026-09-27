@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Network Activity - FraudGuard</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="dashboard">
+
+
+    <!-- ================================= -->
+    <!-- SIDEBAR -->
+    <!-- ================================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                🛡️
+            </div>
+
+            <div>
+
+                <h2>
+                    FraudGuard
+                </h2>
+
+                <span>
+                    Blockchain Security
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a
+                class="nav-item"
+                href="index.html"
+            >
+                <span>▦</span>
+                Dashboard
+            </a>
+
+
+            <a class="nav-item">
+
+                <span>⚠</span>
+
+                Risk Monitoring
+
+            </a>
+
+
+            <a class="nav-item">
+
+                <span>⌕</span>
+
+                Transactions
+
+            </a>
+
+
+            <a
+                class="nav-item"
+                href="entities.html"
+            >
+
+                <span>◎</span>
+
+                Entity Analysis
+
+            </a>
+
+
+            <a
+                class="nav-item active"
+                href="network.html"
+            >
+
+                <span>◈</span>
+
+                Network Activity
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="system-status">
+
+                <span class="status-dot"></span>
+
+                <div>
+
+                    <strong>
+                        System Online
+                    </strong>
+
+                    <small>
+                        AI Engine Active
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="version">
+
+                SIH 2026 Prototype
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================================= -->
+    <!-- MAIN CONTENT -->
+    <!-- ================================= -->
+
+    <main class="main">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+                    Network Activity
+                </h1>
+
+                <p>
+                    Blockchain transaction network and entity relationship analysis
+                </p>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <div class="live">
+
+                    <span></span>
+
+                    LIVE MONITORING
+
+                </div>
+
+
+                <div class="profile">
+                    👤
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ================================= -->
+        <!-- NETWORK SUMMARY -->
+        <!-- ================================= -->
+
+        <section class="stats">
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        Network Nodes
+                    </span>
+
+                    <div class="stat-icon blue">
+                        ◈
+                    </div>
+
+                </div>
+
+
+                <h2 id="networkNodes">
+                    0
+                </h2>
+
+
+                <div class="stat-change">
+
+                    <span>
+                        Blockchain entities
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card danger">
+
+                <div class="stat-top">
+
+                    <span>
+                        High Risk Nodes
+                    </span>
+
+                    <div class="stat-icon red">
+                        ⚠
+                    </div>
+
+                </div>
+
+
+                <h2 id="networkHighRisk">
+                    0
+                </h2>
+
+
+                <div class="stat-change red-text">
+
+                    <span>
+                        Requires investigation
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card warning">
+
+                <div class="stat-top">
+
+                    <span>
+                        Network Connections
+                    </span>
+
+                    <div class="stat-icon orange">
+                        ↔
+                    </div>
+
+                </div>
+
+
+                <h2 id="networkConnections">
+                    0
+                </h2>
+
+
+                <div class="stat-change orange-text">
+
+                    <span>
+                        Entity relationships
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card success">
+
+                <div class="stat-top">
+
+                    <span>
+                        Network Status
+                    </span>
+
+                    <div class="stat-icon green">
+                        ✓
+                    </div>
+
+                </div>
+
+
+                <h2>
+                    ACTIVE
+                </h2>
+
+
+                <div class="stat-change green-text">
+
+                    <span>
+                        AI monitoring enabled
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================= -->
+        <!-- NETWORK GRAPH -->
+        <!-- ================================= -->
+
+        <section class="transactions-section">
+
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        Blockchain Network
+                    </h2>
+
+                    <p>
+                        Connected entities and transaction relationships
+                    </p>
+
+                </div>
+
+
+                <span class="risk-badge">
+                    LIVE NETWORK
+                </span>
+
+            </div>
+
+
+
+            <!-- ================================= -->
+            <!-- NETWORK CONTROLS -->
+            <!-- ================================= -->
+
+            <div class="transaction-controls">
+
+
+                <div class="search-box">
+
+                    <span>
+                        🔎
+                    </span>
+
+                    <input
+                        type="text"
+                        id="networkSearch"
+                        placeholder="Search Entity ID..."
+                    >
+
+                </div>
+
+
+                <select
+                    id="networkRiskFilter"
+                    class="risk-filter"
+                >
+
+                    <option value="ALL">
+                        All Risk Levels
+                    </option>
+
+                    <option value="HIGH">
+                        High Risk
+                    </option>
+
+                    <option value="MEDIUM">
+                        Medium Risk
+                    </option>
+
+                    <option value="LOW">
+                        Low Risk
+                    </option>
+
+                </select>
+
+
+                <button
+                    id="clearNetworkFilters"
+                    class="clear-filter"
+                >
+                    Clear
+                </button>
+
+            </div>
+
+
+
+            <!-- ================================= -->
+            <!-- NETWORK VISUALIZATION -->
+            <!-- ================================= -->
+
+            <div
+                id="networkGraph"
+                style="
+                    width:100%;
+                    height:520px;
+                    position:relative;
+                    overflow:hidden;
+                    border-radius:16px;
+                    background:#f8faff;
+                    border:1px solid #e5eaf2;
+                "
+            >
+
+                <div
+                    id="networkLoading"
+                    style="
+                        position:absolute;
+                        inset:0;
+                        display:flex;
+                        align-items:center;
+                        justify-content:center;
+                        color:#6f7d95;
+                        font-size:16px;
+                    "
+                >
+
+                    Loading blockchain network...
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================= -->
+        <!-- NETWORK INFORMATION -->
+        <!-- ================================= -->
+
+        <section class="panel investigation">
+
+
+            <div class="investigation-title">
+
+                <div>
+
+                    <span class="section-label">
+                        NETWORK INVESTIGATION
+                    </span>
+
+
+                    <h2>
+                        Selected Entity
+                    </h2>
+
+                </div>
+
+
+                <span
+                    id="selectedNetworkRisk"
+                    class="risk-badge large"
+                >
+                    SELECT NODE
+                </span>
+
+            </div>
+
+
+
+            <div class="investigation-grid">
+
+
+                <div class="investigation-card">
+
+                    <span>
+                        Entity ID
+                    </span>
+
+                    <strong
+                        id="networkEntityId"
+                        style="font-size:14px;"
+                    >
+                        —
+                    </strong>
+
+                </div>
+
+
+
+                <div class="investigation-card">
+
+                    <span>
+                        Cluster
+                    </span>
+
+                    <strong id="networkCluster">
+                        —
+                    </strong>
+
+                    <small>
+                        DBSCAN cluster
+                    </small>
+
+                </div>
+
+
+
+                <div class="investigation-card">
+
+                    <span>
+                        Transactions
+                    </span>
+
+                    <strong id="networkTransactionCount">
+                        —
+                    </strong>
+
+                    <small>
+                        Entity activity
+                    </small>
+
+                </div>
+
+
+
+                <div class="investigation-card">
+
+                    <span>
+                        Risk Score
+                    </span>
+
+                    <strong id="networkRiskScore">
+                        —
+                    </strong>
+
+                    <small>
+                        Average risk
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="evidence">
+
+                <h3>
+                    🔎 Network Risk Analysis
+                </h3>
+
+
+                <div
+                    class="evidence-list"
+                    id="networkEvidence"
+                >
+
+                    <div>
+
+                        <span>✓</span>
+
+                        Select a node from the network to investigate.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================= -->
+        <!-- FOOTER -->
+        <!-- ================================= -->
+
+        <footer>
+
+            Blockchain Fraud Detection •
+            AI/ML Network Analysis •
+            SIH 2026
+
+        </footer>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- ================================= -->
+<!-- NETWORK JAVASCRIPT -->
+<!-- ================================= -->
+
+<script src="network.js"></script>
+
+
+</body>
+
+</html>

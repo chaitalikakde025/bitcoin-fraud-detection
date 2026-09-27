@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blockchain Fraud Detection</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+
+<body>
+
+<div class="dashboard">
+
+
+    <!-- ===================================================== -->
+    <!-- SIDEBAR -->
+    <!-- ===================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                🛡️
+            </div>
+
+            <div>
+
+                <h2>FraudGuard</h2>
+
+                <span>
+                    Blockchain Security
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a
+                class="nav-item active"
+                href="#dashboardSection"
+                id="dashboardNav"
+            >
+                <span>▦</span>
+                Dashboard
+            </a>
+
+
+            <a
+                class="nav-item"
+                href="#riskMonitoringSection"
+                id="riskMonitoringNav"
+            >
+                <span>⚠</span>
+                Risk Monitoring
+            </a>
+
+
+            <a
+                class="nav-item"
+                href="#transactionsSection"
+                id="transactionsNav"
+            >
+                <span>⌕</span>
+                Transactions
+            </a>
+
+
+            <a
+                class="nav-item"
+                href="entities.html"
+>
+                <span>◎</span>
+                Entity Analysis
+            </a>
+
+
+             <a 
+                class="nav-item" 
+                href="network.html" 
+>
+                <span>◈</span> 
+                Network Activity 
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="system-status">
+
+                <span class="status-dot"></span>
+
+                <div>
+
+                    <strong>
+                        System Online
+                    </strong>
+
+                    <small>
+                        AI Engine Active
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="version">
+                SIH 2026 Prototype
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ===================================================== -->
+    <!-- MAIN CONTENT -->
+    <!-- ===================================================== -->
+
+    <main class="main">
+
+
+        <!-- ================================================= -->
+        <!-- TOP BAR -->
+        <!-- ================================================= -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+                    Fraud Detection Dashboard
+                </h1>
+
+                <p>
+                    AI-powered Bitcoin transaction risk monitoring
+                </p>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <div class="live">
+
+                    <span></span>
+
+                    LIVE MONITORING
+
+                </div>
+
+
+                <div class="profile">
+                    👤
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ================================================= -->
+        <!-- DASHBOARD SECTION -->
+        <!-- ================================================= -->
+
+        <section id="dashboardSection">
+
+
+            <!-- ============================================= -->
+            <!-- STAT CARDS -->
+            <!-- ============================================= -->
+
+            <section class="stats">
+
+
+                <!-- TOTAL TRANSACTIONS -->
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <span>
+                            Total Transactions
+                        </span>
+
+                        <div class="stat-icon blue">
+                            ↗
+                        </div>
+
+                    </div>
+
+
+                    <h2 id="totalTransactions">
+                        5,000
+                    </h2>
+
+
+                    <div class="stat-change">
+
+                        <span>
+                            ↑ 12.4%
+                        </span>
+
+                        <small>
+                            vs previous period
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- HIGH RISK -->
+
+                <div class="stat-card danger">
+
+                    <div class="stat-top">
+
+                        <span>
+                            High Risk
+                        </span>
+
+                        <div class="stat-icon red">
+                            ⚠
+                        </div>
+
+                    </div>
+
+
+                    <h2 id="highRisk">
+                        125
+                    </h2>
+
+
+                    <div class="stat-change red-text">
+
+                        <span>
+                            ↑ 8.2%
+                        </span>
+
+                        <small>
+                            requires attention
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MEDIUM RISK -->
+
+                <div class="stat-card warning">
+
+                    <div class="stat-top">
+
+                        <span>
+                            Medium Risk
+                        </span>
+
+                        <div class="stat-icon orange">
+                            !
+                        </div>
+
+                    </div>
+
+
+                    <h2 id="mediumRisk">
+                        430
+                    </h2>
+
+
+                    <div class="stat-change orange-text">
+
+                        <span>
+                            ↑ 4.1%
+                        </span>
+
+                        <small>
+                            under monitoring
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- LOW RISK -->
+
+                <div class="stat-card success">
+
+                    <div class="stat-top">
+
+                        <span>
+                            Low Risk
+                        </span>
+
+                        <div class="stat-icon green">
+                            ✓
+                        </div>
+
+                    </div>
+
+
+                    <h2 id="lowRisk">
+                        4,445
+                    </h2>
+
+
+                    <div class="stat-change green-text">
+
+                        <span>
+                            ✓ Stable
+                        </span>
+
+                        <small>
+                            normal activity
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ============================================= -->
+            <!-- CHARTS -->
+            <!-- ============================================= -->
+
+            <section class="charts">
+
+
+                <!-- RISK DISTRIBUTION -->
+
+                <div class="panel risk-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h3>
+                                Risk Distribution
+                            </h3>
+
+                            <p>
+                                Transaction classification overview
+                            </p>
+
+                        </div>
+
+
+                        <button>
+                            Last 30 Days ▾
+                        </button>
+
+                    </div>
+
+
+                    <div class="risk-chart">
+
+                        <canvas id="riskChart"></canvas>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TRANSACTION ACTIVITY -->
+
+                <div class="panel activity-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h3>
+                                Transaction Activity
+                            </h3>
+
+                            <p>
+                                Transaction volume and high-risk alerts
+                            </p>
+
+                        </div>
+
+
+                        <button>
+                            Weekly ▾
+                        </button>
+
+                    </div>
+
+
+                    <div class="activity-chart">
+
+                        <canvas id="activityChart"></canvas>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- RISK MONITORING -->
+        <!-- ================================================= -->
+
+        <section
+            id="riskMonitoringSection"
+            class="risk-monitoring-section"
+        >
+
+
+            <!-- HEADER -->
+
+            <div class="risk-monitoring-header">
+
+                <div>
+
+                    <h2>
+                        Risk Monitoring
+                    </h2>
+
+                    <p>
+                        Real-time AI/ML transaction risk overview
+                    </p>
+
+                </div>
+
+
+                <span class="monitoring-badge">
+                    AI MONITORING
+                </span>
+
+            </div>
+
+
+
+            <!-- ============================================= -->
+            <!-- MONITORING CARDS -->
+            <!-- ============================================= -->
+
+            <div class="monitoring-grid">
+
+
+                <!-- HIGH RISK -->
+
+                <div class="monitoring-card">
+
+                    <div class="monitoring-card-top">
+
+                        <div class="monitoring-icon red">
+                            ⚠
+                        </div>
+
+                        <span class="monitoring-card-title">
+                            High Risk Alerts
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="monitoring-card-value"
+                        id="monitoringHighRisk"
+                    >
+                        --
+                    </div>
+
+
+                    <div class="monitoring-card-description">
+                        Requires investigation
+                    </div>
+
+                </div>
+
+
+
+                <!-- MEDIUM RISK -->
+
+                <div class="monitoring-card">
+
+                    <div class="monitoring-card-top">
+
+                        <div class="monitoring-icon orange">
+                            !
+                        </div>
+
+                        <span class="monitoring-card-title">
+                            Medium Risk
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="monitoring-card-value"
+                        id="monitoringMediumRisk"
+                    >
+                        --
+                    </div>
+
+
+                    <div class="monitoring-card-description">
+                        Under monitoring
+                    </div>
+
+                </div>
+
+
+
+                <!-- LOW RISK -->
+
+                <div class="monitoring-card">
+
+                    <div class="monitoring-card-top">
+
+                        <div class="monitoring-icon green">
+                            ✓
+                        </div>
+
+                        <span class="monitoring-card-title">
+                            Low Risk
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="monitoring-card-value"
+                        id="monitoringLowRisk"
+                    >
+                        --
+                    </div>
+
+
+                    <div class="monitoring-card-description">
+                        Normal activity
+                    </div>
+
+                </div>
+
+
+
+                <!-- AI ENGINE -->
+
+                <div class="monitoring-card">
+
+                    <div class="monitoring-card-top">
+
+                        <div class="monitoring-icon purple">
+                            AI
+                        </div>
+
+                        <span class="monitoring-card-title">
+                            AI Engine
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="monitoring-card-value"
+                        id="monitoringAIStatus"
+                    >
+                        ACTIVE
+                    </div>
+
+
+                    <div class="monitoring-card-description">
+                        Isolation Forest + DBSCAN
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ============================================= -->
+            <!-- RISK ALERT SUMMARY -->
+            <!-- ============================================= -->
+
+            <div class="risk-alert-summary">
+
+
+                <div class="risk-alert-title">
+
+                    <span>
+                        ⚠
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+                            Risk Alert Summary
+                        </h3>
+
+                        <div class="risk-alert-subtitle">
+                            Current AI-detected suspicious activity
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="risk-alert-stats">
+
+
+                    <!-- HIGHEST RISK SCORE -->
+
+                    <div class="alert-stat high">
+
+                        <span>
+                            Highest Risk Score
+                        </span>
+
+                        <strong id="highestRiskScore">
+                            --
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- SUSPICIOUS TRANSACTIONS -->
+
+                    <div class="alert-stat medium">
+
+                        <span>
+                            Suspicious Transactions
+                        </span>
+
+                        <strong id="suspiciousTransactions">
+                            --
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- DETECTION STATUS -->
+
+                    <div class="alert-stat status">
+
+                        <span>
+                            Detection Status
+                        </span>
+
+                        <strong id="detectionStatus">
+                            ACTIVE
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- TRANSACTIONS -->
+        <!-- ================================================= -->
+
+        <section
+            class="transactions-section"
+            id="transactionsSection"
+        >
+
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        High Risk Transactions
+                    </h2>
+
+                    <p>
+                        AI/ML flagged transactions requiring investigation
+                    </p>
+
+                </div>
+
+
+                <span class="risk-badge">
+                    AI Detected
+                </span>
+
+            </div>
+
+
+
+            <!-- ============================================= -->
+            <!-- SEARCH AND FILTER -->
+            <!-- ============================================= -->
+
+            <div class="transaction-controls">
+
+
+                <!-- SEARCH -->
+
+                <div class="search-box">
+
+                    <span>
+                        🔎
+                    </span>
+
+                    <input
+                        type="text"
+                        id="transactionSearch"
+                        placeholder="Search Transaction ID..."
+                    >
+
+                </div>
+
+
+
+                <!-- RISK FILTER -->
+
+                <select
+                    id="riskFilter"
+                    class="risk-filter"
+                >
+
+                    <option value="ALL">
+                        All Risk Levels
+                    </option>
+
+                    <option value="HIGH">
+                        High Risk
+                    </option>
+
+                    <option value="MEDIUM">
+                        Medium Risk
+                    </option>
+
+                    <option value="LOW">
+                        Low Risk
+                    </option>
+
+                </select>
+
+
+
+                <!-- CLEAR -->
+
+                <button
+                    id="clearFilters"
+                    class="clear-filter"
+                >
+                    Clear
+                </button>
+
+            </div>
+
+
+
+            <!-- ============================================= -->
+            <!-- TRANSACTION TABLE -->
+            <!-- ============================================= -->
+
+            <div class="table-container">
+
+                <table id="transactionTable">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Transaction ID
+                            </th>
+
+                            <th>
+                                Amount
+                            </th>
+
+                            <th>
+                                Risk Score
+                            </th>
+
+                            <th>
+                                Risk Level
+                            </th>
+
+                            <th>
+                                Detection Evidence
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="transactionTableBody">
+
+                        <tr>
+
+                            <td colspan="5">
+                                Loading transactions...
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- ENTITY ANALYSIS / DETECTION SIGNALS -->
+        <!-- ================================================= -->
+
+        <section
+            class="lower-grid"
+            id="entityAnalysisSection"
+        >
+
+
+            <div class="panel detection-panel">
+
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h3>
+                            Detection Signals
+                        </h3>
+
+                        <p>
+                            AI/ML detection breakdown
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ========================================= -->
+                <!-- AI ANOMALY -->
+                <!-- ========================================= -->
+
+                <div class="signal">
+
+                    <div class="signal-info">
+
+                        <span class="signal-icon purple">
+                            AI
+                        </span>
+
+
+                        <div>
+
+                            <strong>
+                                AI Anomaly
+                            </strong>
+
+                            <small>
+                                Isolation Forest
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <strong>
+                        68%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <div class="progress-bar purple-bar"></div>
+
+                </div>
+
+
+
+                <!-- ========================================= -->
+                <!-- PEELING PATTERN -->
+                <!-- ========================================= -->
+
+                <div class="signal">
+
+                    <div class="signal-info">
+
+                        <span class="signal-icon orange">
+                            P
+                        </span>
+
+
+                        <div>
+
+                            <strong>
+                                Peeling Pattern
+                            </strong>
+
+                            <small>
+                                Pattern analysis
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <strong>
+                        42%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <div class="progress-bar orange-bar"></div>
+
+                </div>
+
+
+
+                <!-- ========================================= -->
+                <!-- ENTITY CLUSTERING -->
+                <!-- ========================================= -->
+
+                <div class="signal">
+
+                    <div class="signal-info">
+
+                        <span class="signal-icon blue">
+                            C
+                        </span>
+
+
+                        <div>
+
+                            <strong>
+                                Entity Clustering
+                            </strong>
+
+                            <small>
+                                DBSCAN analysis
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <strong>
+                        31%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <div class="progress-bar blue-bar"></div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+        <!-- ========================================== -->
+<!-- ENTITY ANALYSIS -->
+<!-- ========================================== -->
+
+<section
+    class="panel entity-analysis-section"
+    id="entityAnalysisSection"
+>
+
+    <div class="panel-header">
+
+        <div>
+
+            <h3>
+                Entity Analysis
+            </h3>
+
+            <p>
+                AI-powered wallet and entity risk analysis
+            </p>
+
+        </div>
+
+        <span class="risk-badge">
+            AI ANALYSIS
+        </span>
+
+    </div>
+
+
+    <!-- ENTITY STATISTICS -->
+
+    <div class="entity-stats">
+
+
+        <div class="entity-stat-card">
+
+            <span>
+                Total Entities
+            </span>
+
+            <strong id="totalEntities">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="entity-stat-card">
+
+            <span>
+                High Risk
+            </span>
+
+            <strong
+                id="highRiskEntities"
+                class="entity-high"
+            >
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="entity-stat-card">
+
+            <span>
+                Medium Risk
+            </span>
+
+            <strong
+                id="mediumRiskEntities"
+                class="entity-medium"
+            >
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="entity-stat-card">
+
+            <span>
+                Low Risk
+            </span>
+
+            <strong
+                id="lowRiskEntities"
+                class="entity-low"
+            >
+                0
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- ENTITY SEARCH -->
+
+    <div class="entity-controls">
+
+        <div class="entity-search">
+
+            <span>
+                🔎
+            </span>
+
+            <input
+                type="text"
+                id="entitySearch"
+                placeholder="Search Entity ID..."
+            >
+
+        </div>
+
+
+        <select
+            id="entityRiskFilter"
+            class="entity-filter"
+        >
+
+            <option value="ALL">
+                All Risk Levels
+            </option>
+
+            <option value="HIGH">
+                High Risk
+            </option>
+
+            <option value="MEDIUM">
+                Medium Risk
+            </option>
+
+            <option value="LOW">
+                Low Risk
+            </option>
+
+        </select>
+
+
+        <button
+            id="clearEntityFilters"
+            class="clear-filter"
+        >
+            Clear
+        </button>
+
+    </div>
+
+
+    <!-- ENTITY TABLE -->
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Entity ID
+                    </th>
+
+                    <th>
+                        Cluster
+                    </th>
+
+                    <th>
+                        Transactions
+                    </th>
+
+                    <th>
+                        Total BTC
+                    </th>
+
+                    <th>
+                        Average Risk
+                    </th>
+
+                    <th>
+                        Highest Risk
+                    </th>
+
+                    <th>
+                        Risk Level
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="entityTableBody">
+
+                <tr>
+
+                    <td colspan="7">
+                        Loading entity analysis...
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+
+        <!-- ================================================= -->
+        <!-- NETWORK ACTIVITY -->
+        <!-- ================================================= -->
+
+        <section
+            class="panel network-placeholder"
+            id="networkActivitySection"
+        >
+
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h3>
+                        Network Activity
+                    </h3>
+
+                    <p>
+                        Blockchain transaction network analysis
+                    </p>
+
+                </div>
+
+
+                <span class="risk-badge">
+                    ANALYSIS READY
+                </span>
+
+            </div>
+
+
+
+            <div class="network-message">
+
+                <div class="network-icon">
+                    ◈
+                </div>
+
+
+                <h3>
+                    Blockchain Network Analysis
+                </h3>
+
+
+                <p>
+                    Entity relationships, transaction flows,
+                    wallet connections and suspicious network
+                    patterns will be visualized here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- TRANSACTION INVESTIGATION -->
+        <!-- ================================================= -->
+
+        <section
+            class="panel investigation"
+            id="investigationPanel"
+        >
+
+
+            <!-- INVESTIGATION HEADER -->
+
+            <div class="investigation-title">
+
+
+                <div>
+
+                    <span class="section-label">
+                        TRANSACTION INVESTIGATION
+                    </span>
+
+
+                    <h2>
+                        Suspicious Transaction Analysis
+                    </h2>
+
+                </div>
+
+
+                <span
+                    class="risk-badge high large"
+                    id="investigationRiskLevel"
+                >
+                    SELECT TRANSACTION
+                </span>
+
+            </div>
+
+
+
+            <!-- ============================================= -->
+            <!-- INVESTIGATION CARDS -->
+            <!-- ============================================= -->
+
+            <div class="investigation-grid">
+
+
+                <!-- RISK SCORE -->
+
+                <div class="investigation-card">
+
+                    <span>
+                        Risk Score
+                    </span>
+
+
+                    <strong
+                        class="big-score"
+                        id="investigationRiskScore"
+                    >
+
+                        --
+                        <span>
+                            /100
+                        </span>
+
+                    </strong>
+
+
+                    <div class="score-line">
+
+                        <div
+                            id="investigationScoreBar"
+                            style="width: 0%;"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PEELING SCORE -->
+
+                <div class="investigation-card">
+
+                    <span>
+                        Peeling Score
+                    </span>
+
+
+                    <strong id="investigationPeeling">
+                        --
+                    </strong>
+
+
+                    <small id="investigationPeelingText">
+                        Waiting for transaction
+                    </small>
+
+                </div>
+
+
+
+                <!-- AI ANOMALY -->
+
+                <div class="investigation-card">
+
+                    <span>
+                        AI Anomaly
+                    </span>
+
+
+                    <strong
+                        class="detected"
+                        id="investigationAnomaly"
+                    >
+                        --
+                    </strong>
+
+
+                    <small>
+                        Isolation Forest
+                    </small>
+
+                </div>
+
+
+
+                <!-- ENTITY CLUSTER -->
+
+                <div class="investigation-card">
+
+                    <span>
+                        Entity Cluster
+                    </span>
+
+
+                    <strong id="investigationCluster">
+                        --
+                    </strong>
+
+
+                    <small>
+                        DBSCAN analysis
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ============================================= -->
+            <!-- TRANSACTION DETAILS -->
+            <!-- ============================================= -->
+
+            <div class="investigation-details">
+
+
+                <!-- TRANSACTION ID -->
+
+                <div class="detail-item">
+
+                    <span>
+                        Transaction ID
+                    </span>
+
+
+                    <strong id="investigationTxid">
+                        Select a transaction from the table
+                    </strong>
+
+                </div>
+
+
+
+                <!-- AMOUNT -->
+
+                <div class="detail-item">
+
+                    <span>
+                        Amount
+                    </span>
+
+
+                    <strong id="investigationAmount">
+                        --
+                    </strong>
+
+                </div>
+
+
+
+                <!-- VELOCITY -->
+
+                <div class="detail-item">
+
+                    <span>
+                        Velocity
+                    </span>
+
+
+                    <strong id="investigationVelocity">
+                        --
+                    </strong>
+
+                </div>
+
+
+
+                <!-- FAN OUT -->
+
+                <div class="detail-item">
+
+                    <span>
+                        Fan-out
+                    </span>
+
+
+                    <strong id="investigationFanout">
+                        --
+                    </strong>
+
+                </div>
+
+
+
+                <!-- COUNTRY -->
+
+                <div class="detail-item">
+
+                    <span>
+                        Country
+                    </span>
+
+
+                    <strong id="investigationCountry">
+                        --
+                    </strong>
+
+                </div>
+
+
+
+                <!-- ASN -->
+
+                <div class="detail-item">
+
+                    <span>
+                        ASN
+                    </span>
+
+
+                    <strong id="investigationASN">
+                        --
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ============================================= -->
+            <!-- EVIDENCE -->
+            <!-- ============================================= -->
+
+            <div class="evidence">
+
+                <h3>
+                    🔎 Evidence Detected
+                </h3>
+
+
+                <div
+                    class="evidence-list"
+                    id="investigationEvidence"
+                >
+
+                    <div>
+
+                        <span>
+                            •
+                        </span>
+
+                        Select a transaction to view AI evidence.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- FOOTER -->
+        <!-- ================================================= -->
+
+        <footer>
+
+            Blockchain Fraud Detection •
+            AI/ML Security Prototype •
+            SIH 2026
+
+        </footer>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- ===================================================== -->
+<!-- JAVASCRIPT -->
+<!-- ===================================================== -->
+
+<script src="app.js"></script>
+<script src="entities.js"></script>
+
+
+</body>
+
+</html>
