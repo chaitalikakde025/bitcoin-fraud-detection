@@ -31,7 +31,10 @@ app.add_middleware(
 # DATA PATH
 # ==========================================
 
-DATA_PATH = "data/analyzed_transactions.csv"
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_PATH = BASE_DIR / "Data" / "analyzed_transactions.csv"
 
 
 # ==========================================

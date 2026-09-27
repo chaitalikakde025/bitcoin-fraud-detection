@@ -11,7 +11,7 @@ let allEntities = [];
 // ==========================================
 
 const ENTITY_API =
-    "http://127.0.0.1:8000/entities";
+    "https://fraudguard-api-ch4d.onrender.com/entities";
 
 
 // ==========================================

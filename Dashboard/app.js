@@ -584,7 +584,7 @@ async function loadSummary() {
 
         const response =
             await fetch(
-                "http://127.0.0.1:8000/summary"
+                "https://fraudguard-api-ch4d.onrender.com/summary"
             );
 
 
@@ -700,7 +700,7 @@ async function loadSummary() {
 
         const activityResponse =
             await fetch(
-                "http://127.0.0.1:8000/activity"
+                "https://fraudguard-api-ch4d.onrender.com/activity"
             );
 
 
@@ -820,7 +820,7 @@ async function loadTransactions() {
 
         const response =
             await fetch(
-                "http://127.0.0.1:8000/transactions"
+                "https://fraudguard-api-ch4d.onrender.com/transactions"
             );
 
 
@@ -1512,7 +1512,7 @@ async function loadRiskMonitoring() {
 
         const response =
             await fetch(
-                "http://127.0.0.1:8000/summary"
+                "https://fraudguard-api-ch4d.onrender.com/summary"
             );
 
 
@@ -1590,7 +1590,7 @@ async function loadRiskMonitoring() {
 
         const transactionResponse =
             await fetch(
-                "http://127.0.0.1:8000/transactions"
+                "https://fraudguard-api-ch4d.onrender.com/transactions"
             );
 
 
